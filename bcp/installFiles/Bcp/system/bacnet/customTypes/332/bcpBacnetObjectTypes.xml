@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- objectTypes.xml -->
+<!--
+  This file contains property information about standard BACnet object types.
+  The information is intended to be current with ANSI/ASHRAE 135-2004, which
+  is Protocol_Version 1, Protocol_Revision 4.
+
+  The object type information is presented in the form of a list of possible
+  object types that may exist within this device, listed with the possible
+  properties for this object type.  The metadata for each property is in the
+  form of XML attributes.
+
+  The identifiers for each property are:
+  id  Flag name        Optional Description
+  n   Name                n     used for creating the Niagara Property object.
+  i   Property Identifier n     see BBacnetPropertyIdentifier.java.
+  a   Asn Type            n     see BacnetConst.java for negative values.
+  r   Required flag       y     true if this is a Required property.
+  e   Extensible flag     y     true if this is an extensible enumeration
+  t   Type                y     class name for constructed data types.
+  b   BitString name      y     name of the bit string - see BacnetBitStringUtil.java.
+  s   Size                y     the fixed size of this array.
+  f   Facet               y     true if this property configures a facet for display
+  c   Facet-controlled    y     configures facet control of property display
+
+  ASN Primitive Data Types
+  ========================
+  NULL                     = 0
+  BOOLEAN                  = 1
+  Unsigned                 = 2
+  INTEGER                  = 3
+  REAL                     = 4
+  Double                   = 5
+  OCTET_STRING             = 6
+  CharacterString          = 7
+  BIT_STRING               = 8
+  ENUMERATED               = 9
+  Date                     = 10
+  Time                     = 11
+  BACnetObjectIdentifier   = 12
+  ASHRAE_RESERVED_13       = 13
+  ASHRAE_RESERVED_14       = 14
+  ASHRAE_RESERVED_15       = 15
+
+  Niagara-defined codes for special data types
+  ============================================
+  ASN_CONSTRUCTED_DATA     = -1
+  ASN_BACNET_ARRAY         = -2
+  ASN_BACNET_LIST          = -3
+  ASN_ANY                  = -4
+  ASN_CHOICE               = -5
+  ASN_UNKNOWN_PROPRIETARY  = -6
+
+-->
+<!--                                            
+  <property n="covMinSendTime"                  i="1000" a="2"/>
+  <property n="timeToNextState"                 i="1001" a="2"/>
+  <property n="nextState"                       i="1002" a="-4"/>
+  <property n="saturationTime"                  i="1003" a="2"/>
+  <property n="covPeriod"                       i="1004" a="2"/>
+  <property n="RampTime"                        i="1005" a="2"/> 
+  <property n="saturatinTimeLowLimitEnable"     i="1006" a="1"/>
+  <property n="saturatinTimeHighLimitEnable"    i="1007" a="1"/>
+  <property n="effectivePresentValue"           i="1008" a="4"/>
+  <property n="outputMode"                      i="1009" a="9" e="true" t="bcsv3:BcpEnumOutputMode"/>
+  <property n="effectivePresentValue"           i="1010" a="9" e="true" t="bcsv3:Mode"/>
+-->
+
+<objectTypes>
+ <object n="AnalogInput" t="0">                 
+  <property n="tempMeasOnOff"                   i="1000001" a="1"/>
+  <property n="tempFilter"                      i="1000002" a="4"/>
+  <property n="lightMeasOnOff"                  i="1000011" a="1"/>
+  <property n="sensorReflect"                   i="1000012" a="2"/>
+  <property n="lightFilter"                     i="1000013" a="2"/>
+  <property n="inputCfg"                        i="1000021" a="2"/>
+  <property n="IOPolarity"                      i="1000660" a="1"/>
+ </object>
+
+ <object n="AnalogOutput" t="1">
+  <property n="outputCfg"                       i="1000022" a="2"/>
+  <property n="IOPolarity"                      i="1000660" a="1"/>
+  <property n="userGroup"                       i="1000052" a="2"/>
+  <property n="room"                            i="1000061" a="2"/>
+  <property n="lightType"                       i="1000151" a="2"/>
+  <property n="ctrlGroup"                       i="1000091" a="2"/>
+  <property n="ctrlOnOff"                       i="1000153" a="1"/>
+  <property n="minCtrl"                         i="1000154" a="2"/>
+  <property n="dimmingTime"                     i="1000155" a="2"/>
+  <property n="IOInProcess"                     i="1000156" a="1"/>
+  <property n="progressValue"                   i="1000157" a="4"/>
+  <property n="minLightValue"                   i="1000158" a="4"/>
+  <property n="maxLightValue"                   i="1000159" a="4"/>
+  <property n="regulGroup"                      i="1000152" a="2"/>     <!-- Used by IRC -->
+ </object>
+
+ <object n="AnalogValue" t="2">
+  <property n="fanOffDelay"                     i="1000120" a="2"/>
+  <property n="fanType"                         i="1000121" a="2"/>
+  <property n="fanOverrideToLev1"               i="1000122" a="2"/>
+  <property n="fanCtrlMode"                     i="1000123" a="2"/>
+  <property n="fanLevel1"                       i="1000124" a="2"/>
+  <property n="fanLevel2"                       i="1000125" a="2"/>
+  <property n="fanLevel3"                       i="1000126" a="2"/>
+  <property n="fanMinSpeed"                     i="1000127" a="2"/>
+  <property n="displayRawValue"                 i="1000139" a="1"/>
+  <property n="sheddingMode"                    i="1000160" a="2"/>
+  <property n="occupiedCool"                    i="1000210" a="4"/>
+  <property n="standbyCool"                     i="1000211" a="4"/>
+  <property n="unoccupiedCool"                  i="1000212" a="4"/>
+  <property n="occupiedHeat"                    i="1000213" a="4"/>
+  <property n="standbyHeat"                     i="1000214" a="4"/>
+  <property n="unoccupiedHeat"                  i="1000215" a="4"/>
+  <property n="scalingLow"                      i="1000230" a="2"/>
+  <property n="scalingHigh"                     i="1000231" a="2"/>
+  <property n="heatScalingLow"                  i="1000232" a="2"/>
+  <property n="heatScalingHigh"                 i="1000233" a="2"/>
+  <property n="coolScalingLow"                  i="1000234" a="2"/>
+  <property n="coolScalingHigh"                 i="1000235" a="2"/>
+  <property n="tempEffectMode"                  i="1000200" a="2"/>     <!-- Used by IRC -->
+  <property n="tempMeanTime"                    i="1000201" a="2"/>     <!-- Used by IRC -->
+  <property n="sensorSelect"                    i="1000202" a="2"/>     <!-- Used by IRC -->
+ </object>
+
+ <object n="BinaryInput" t="3">
+  <property n="inputCfg"                        i="1000021" a="2"/>
+ </object>
+
+ <object n="BinaryOutput" t="4">
+  <property n="outputCfg"                       i="1000022" a="2"/>
+ </object>
+
+ <object n="Loop" t="12">
+  <property n="equipType"                       i="1000101" a="2"/>
+  <property n="roomSensorDisplayCfg"            i="1000103" a="2"/>
+  <property n="roomSensorMenuCfg"               i="1000680" a="2"/>
+  <property n="offsetTemp"                      i="1000104" a="3"/>
+  <property n="offsetDischAir"                  i="1000105" a="3"/>
+  <property n="frostProtectionSetpoint"         i="1000106" a="2"/>
+  <property n="valveCycleTime"                  i="1000107" a="2"/>
+  <property n="relayCycleTime"                  i="1000108" a="2"/>
+  <property n="dischairType"                    i="1000110" a="2"/>
+  <property n="dischairPropband"                i="1000111" a="2"/>
+  <property n="dischairLowLimit"                i="1000112" a="2"/>
+  <property n="dischairHighLimit"               i="1000113" a="2"/>
+  <property n="roomSensorDisplayOdm"            i="1000114" a="2"/>
+  <property n="terminalLoad"                    i="1000144" a="4"/>
+  <property n="fastZone"                        i="1000130" a="3"/>
+  <property n="deadBand"                        i="1000131" a="3"/>
+  <property n="windowGroupScaling"              i="1000132" a="-2" s="2" t="bacnet:BacnetUnsigned"/>
+  <property n="corridorGroupScaling"            i="1000133" a="-2" s="2" t="bacnet:BacnetUnsigned"/>
+  <property n="lightPower"                      i="1000135" a="2"/>
+  <property n="lightPowerRatio"                 i="1000136" a="2"/>
+  <property n="lightEffectMode"                 i="1000137" a="2"/>
+  <property n="lightMeanTime"                   i="1000138" a="2"/>
+  <property n="corridorLightCmdFb"              i="1000146" a="4"/>
+  <property n="windowLightCmdFb"                i="1000147" a="4"/>
+  <property n="sensorRange"                     i="1000140" a="2"/>
+  <property n="type"                            i="1000141" a="2"/>
+  <property n="damperLevel1"                    i="1000142" a="2"/>
+  <property n="damperLevel2"                    i="1000143" a="2"/>
+  <property n="spaceCO2Fb"                      i="1000145" a="4"/>
+  <property n="saveLightSetpoint"               i="1000149" a="1"/>
+  <property n="sixWayValveMinHeat"              i="1000250" a="2"/>
+  <property n="sixWayValveMaxHeat"              i="1000251" a="2"/>
+  <property n="sixWayValveMinCool"              i="1000252" a="2"/>
+  <property n="sixWayValveMaxCool"              i="1000253" a="2"/>
+  <property n="sixWayValveDeadBand"             i="1000254" a="2"/>
+  <property n="outdoorOffset"                   i="1000254" a="2"/>
+  <property n="roomModuleType"                  i="1000102" a="2"/>     <!-- Used by IRC -->
+ </object>
+
+ <object n="MultiStateOutput" t="14">
+  <property n="room"                            i="1000061" a="2"/>
+  <property n="ctrlGroup"                       i="1000091" a="2"/>
+  <property n="translationTime"                 i="1000084" a="2"/>
+  <property n="rotationTime"                    i="1000087" a="2"/>
+  <property n="rotationStep"                    i="1000088" a="2"/>
+  <property n="setPosition"                     i="1000086" a="2"/>
+  <property n="IOInProcess"                     i="1000156" a="1"/>
+  <property n="IOPolarity"                      i="1000660" a="1"/>
+  <property n="sblndInit"                       i="1000676" a="1"/>
+  <property n="translationFb"                   i="1000674" a="2"/>
+  <property n="rotationFb"                      i="1000675" a="2"/>
+  <property n="userGroup"                       i="1000052" a="2"/>
+  <property n="sunPosition"                     i="1000081" a="2"/>     <!-- Used by IRC -->
+  <property n="sblndType"                       i="1000082" a="2"/>     <!-- Used by IRC -->
+  <property n="sblndRotSpeed"                   i="1000083" a="2"/>     <!-- Used by IRC -->
+  <property n="sblndPwmRotation"                i="1000085" a="2"/>     <!-- Used by IRC -->
+ </object>
+
+ <object n="MultiStateValue" t="19">
+  <property n="fanReset"                        i="1000031" a="1"/>
+  <property n="offsetReset"                     i="1000042" a="1"/>
+  <property n="offsetRange"                     i="1000043" a="2"/>
+  <property n="remoteCtrlCmdType"               i="1000051" a="2"/>
+  <property n="userGroup"                       i="1000052" a="2"/>
+  <property n="room"                            i="1000061" a="2"/>
+  <property n="preasMeasOnOff"                  i="1000071" a="1"/>
+  <property n="sensorPresFilter"                i="1000072" a="2"/>
+  <property n="userOccCfg"                      i="1000073" a="2"/>
+  <property n="BMSOccCfg"                       i="1000074" a="2"/>
+  <property n="unoccInhibitDelay"               i="1000075" a="2"/>
+  <!--<property n="lightOvrEn1"                 i="1000170" a="8"/> Proprietary BitString not supported at this time...
+  <property n="lightOvrEn2"                     i="1000171" a="8"/>
+  <property n="lightCtrlEn1"                    i="1000172" a="8"/>
+  <property n="lightCtrlEn2"                    i="1000173" a="8"/>
+  <property n="sblndOvrEn1"                     i="1000174" a="8"/>
+  <property n="sblndOvrEn2"                     i="1000175" a="8"/>-->
+  <property n="dimLight1"                       i="1000176" a="-2" s="6" t="bacnet:BacnetUnsigned"/>
+  <property n="dimLight2"                       i="1000177" a="-2" s="6" t="bacnet:BacnetUnsigned"/>
+  <property n="sblndTranslation"                i="1000178" a="-2" s="6" t="bacnet:BacnetUnsigned"/>
+  <property n="sblndRotation"                   i="1000183" a="-2" s="6" t="bacnet:BacnetUnsigned"/>
+  <property n="roomUnoccDelay"                  i="1000179" a="-2" s="6" t="bacnet:BacnetUnsigned"/>
+  <property n="hvacMode"                        i="1000148" a="4"/>
+  <property n="effectOccCfg"                    i="1000180" a="-2" s="6" t="bacnet:BacnetUnsigned"/>
+  <!--<property n="analogFanInhibit"            i="1000181" a="8"/> Proprietary BitString not supported at this time...
+  <property n="analogOffsetInhibit"             i="1000182" a="8"/>-->
+  <property n="sblndTranslationValue"           i="1000670" a="2"/>
+  <property n="sblndRotationValue"              i="1000671" a="2"/>
+  <property n="lightDimmingValue"               i="1000672" a="2"/>
+  <property n="pasTempOffset"                   i="1000041" a="2"/>     <!-- Used by IRC -->
+ </object>
+ 
+ <object n="Program" t="16">
+  <property n="progCommand"                     i="1000190" a="2"/>
+  <property n="progParameter"                   i="1000191" a="2"/>
+  <property n="progResponse"                    i="1000194" a="2"/>
+ </object>
+  
+ <object n="RIR" t="514">
+  <property n="IRReceiverZone"                  i="1000050" a="2"/>
+  <property n="room"                            i="1000061" a="2"/>
+  <property n="lightCtrlOff"                    i="1000053" a="1"/>
+  <property n="sblndCtrlOff"                    i="1000054" a="1"/>
+  <property n="occOff"                          i="1000055" a="1"/>
+  <property n="fanOff"                          i="1000056" a="1"/>
+  <property n="tempOffsetOff"                   i="1000057" a="1"/>
+  <property n="operatingMode"                   i="1000220" a="2"/>
+  <property n="macAddress"                      i="1000221" a="2"/>
+  <property n="baudRate"                        i="1000222" a="2"/>
+  <property n="EOLTermination"                  i="1000223" a="1"/>
+  <property n="failSafe"                        i="1000224" a="1"/>
+ </object>
+</objectTypes>

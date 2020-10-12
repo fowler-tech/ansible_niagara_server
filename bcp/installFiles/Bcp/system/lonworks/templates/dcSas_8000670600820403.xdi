@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls SAS" shortVendor="dcSas" model="RCL-Blind-8" programId="80 00 67 06 00 82 04 03">
+  <WIZS>
+    <WIZ shortName="RCLRCBWiz" name="RCL RCB Wizard" key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{78E63588-1A31-4889-8F51-AE3C189DF811}_is1,DisplayIcon"/>
+  </WIZS>
+  <PTS>
+  </PTS>
+  <DEVICE>
+    <LMOS>
+      <LMO name="NodeObject" layoutType="top" displayNvs="true"/>
+      <LMO name="RSSensor01" layoutType="left" displayNvs="true"/>
+      <LMO name="RSSensor02" layoutType="left" displayNvs="true"/>
+      <LMO name="RSSensor03" layoutType="left" displayNvs="true"/>
+      <LMO name="RSSensor04" layoutType="left" displayNvs="true"/>
+      <LMO name="RoomCtrl01" layoutType="center" displayNvs="true"/>
+      <LMO name="RoomCtrl02" layoutType="center" displayNvs="true"/>
+      <LMO name="RoomCtrl03" layoutType="center" displayNvs="true"/>
+      <LMO name="RoomCtrl04" layoutType="center" displayNvs="true"/>
+      <LMO name="SblndAct01" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct02" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct03" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct04" layoutType="right" displayNvs="true"/>
+	  <LMO name="SblndAct05" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct06" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct07" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct08" layoutType="right" displayNvs="true"/>
+    </LMOS>
+  </DEVICE>
+</DeviceInfo>
+

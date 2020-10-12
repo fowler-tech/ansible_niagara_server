@@ -1,0 +1,14 @@
+---
+- name: Create Management VLAN interface for webserver
+  hosts: all
+  tasks:
+    - name: Create mgmt vlan
+      nmcli:
+        type: vlan
+        conn_name: 'MGMT'
+        ifname: MGMT
+        vlandev: eno4
+        vlanid: 253
+        gw4: 10.1.253.1
+        ip4: 10.1.253.3/24
+        state: present

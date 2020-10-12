@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls SAS" shortVendor="dcSAS" model="IRC-SRC" description="obsolete" programId="80 00 67 55 01 02 04 a1">
+  <WIZS>
+  </WIZS>
+  <DEVICE>
+    <LMOS>
+      <LMO name="node" layoutType="top" displayNvs="true"/>
+      <LMO name="sccFanCoil" layoutType="left" displayNvs="false"/>
+      <LMO name="Light1" layoutType="center" displayNvs="true"/>
+      <LMO name="Light2" layoutType="center" displayNvs="true"/>
+      <LMO name="Light3" layoutType="center" displayNvs="true"/>
+      <LMO name="Light4" layoutType="center" displayNvs="true"/>
+      <LMO name="Store1" layoutType="center" displayNvs="true"/>
+      <LMO name="Store2" layoutType="center" displayNvs="true"/>
+      <LMO name="Store3" layoutType="center" displayNvs="true"/>
+      <LMO name="Store4" layoutType="center" displayNvs="true"/>
+    </LMOS>
+  </DEVICE>
+</DeviceInfo>
+

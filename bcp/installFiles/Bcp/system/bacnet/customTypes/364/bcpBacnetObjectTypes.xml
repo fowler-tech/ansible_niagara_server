@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- objectTypes.xml -->
+<!--
+  This file contains property information about standard BACnet object types.
+  The information is intended to be current with ANSI/ASHRAE 135-2004, which
+  is Protocol_Version 1, Protocol_Revision 4.
+
+  The object type information is presented in the form of a list of possible
+  object types that may exist within this device, listed with the possible
+  properties for this object type.  The metadata for each property is in the
+  form of XML attributes.
+
+  The identifiers for each property are:
+  id  Flag name        Optional Description
+  n   Name                n     used for creating the Niagara Property object.
+  i   Property Identifier n     see BBacnetPropertyIdentifier.java.
+  a   Asn Type            n     see BacnetConst.java for negative values.
+  r   Required flag       y     true if this is a Required property.
+  e   Extensible flag     y     true if this is an extensible enumeration
+  t   Type                y     class name for constructed data types.
+  b   BitString name      y     name of the bit string - see BacnetBitStringUtil.java.
+  s   Size                y     the fixed size of this array.
+  f   Facet               y     true if this property configures a facet for display
+  c   Facet-controlled    y     configures facet control of property display
+
+  ASN Primitive Data Types
+  ========================
+  NULL                     = 0
+  BOOLEAN                  = 1
+  Unsigned                 = 2
+  INTEGER                  = 3
+  REAL                     = 4
+  Double                   = 5
+  OCTET_STRING             = 6
+  CharacterString          = 7
+  BIT_STRING               = 8
+  ENUMERATED               = 9
+  Date                     = 10
+  Time                     = 11
+  BACnetObjectIdentifier   = 12
+  ASHRAE_RESERVED_13       = 13
+  ASHRAE_RESERVED_14       = 14
+  ASHRAE_RESERVED_15       = 15
+
+  Niagara-defined codes for special data types
+  ============================================
+  ASN_CONSTRUCTED_DATA     = -1
+  ASN_BACNET_ARRAY         = -2
+  ASN_BACNET_LIST          = -3
+  ASN_ANY                  = -4
+  ASN_CHOICE               = -5
+  ASN_UNKNOWN_PROPRIETARY  = -6
+
+-->
+<!--
+ <property n="covMinSendTime"                    i="1000" a="2"/>
+  <property n="timeToNextState"                  i="1001" a="2"/>
+  <property n="nextState"                        i="1002" a="-4"/>
+  <property n="saturationTime"                   i="1003" a="2"/>
+  <property n="covPeriod1"                        i="1004" a="2"/>
+  <property n="RampTime"                         i="1005" a="2"/> 
+  <property n="saturatinTimeLowLimitEnable"      i="1006" a="1"/>
+  <property n="saturatinTimeHighLimitEnable"     i="1007" a="1"/>
+  <property n="effectivePresentValue"            i="1008" a="4"/>
+  <property n="outputMode"                       i="1009" a="9" e="true" t="bcsv3:BcpEnumOutputMode"/>
+  <property n="effectivePresentValue"            i="1010" a="9" e="true" t="bcsv3:Mode"/>
+-->
+
+<objectTypes>
+  
+ <object n="AnalogInput" t="0"> 
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+ </object>
+
+ <object n="AnalogOutput" t="1">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+    <property n="effectivePresentValue"            i="1008" a="4" f="true" c="units"/>
+    <property n="outputMode"                       i="1009" a="9" e="true" t="bcsv3:BcpEnumOutputMode"/>  
+    <property n="feedback"                         i="1013" a="9" t="bacnet:BacnetBinaryPv" c="all"/>
+    <property n="runtime"                          i="1014" a="2"/>
+ </object>
+
+ <object n="AnalogValue" t="2">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+ </object>
+
+ <object n="BinaryInput" t="3">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+ </object>
+
+ <object n="BinaryOutput" t="4">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+    <property n="effectivePresentValue1"            i="1010" a="9" r="true" t="bacnet:BacnetBinaryPv" c="all"/>
+    <property n="outputMode"                       i="1009" a="9" e="true" t="bcsv3:BcpEnumOutputMode"/>
+    <property n="feedback"                         i="1013" a="9" t="bacnet:BacnetBinaryPv" c="all"/>
+    <property n="runtime"                          i="1014" a="2"/>
+ </object>
+
+ <object n="BinaryValue" t="5">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+ </object>
+
+ <object n="Calendar" t="6">
+    <property n="timeToNextState"                  i="1001" a="3"/>
+    <property n="nextState"                        i="1002" a="1"/>
+ </object>
+
+ <object n="Loop" t="12"> 
+  <property n="covMinSendTime"                     i="1000" a="2"/>
+  <property n="saturationTime"                     i="1003" a="2"/>
+  <property n="covPeriod1"                          i="1004" a="2"/>
+  <property n="rampTime"                           i="1005" a="2"/> 
+  <property n="saturationTimeLowLimitEnable"       i="1006" a="1"/>
+  <property n="saturationTimeHighLimitEnable"      i="1007" a="1"/>
+  <property n="loopDeadBand"                       i="1011" a="4"/>
+ </object>
+
+ <object n="MultiStateInput" t="13">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+ </object>
+
+ <object n="MultiStateOutput" t="14">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+    <property n="effectivePresentValue"            i="1008" a="4" f="true"/>
+    <property n="outputMode"                       i="1009" a="9" e="true" t="bcsv3:BcpEnumOutputMode"/>
+ </object>
+
+ <object n="MultiStateValue" t="19">
+    <property n="covMinSendTime"                   i="1000" a="2"/>
+    <property n="covPeriod1"                        i="1004" a="2"/>
+ </object>
+
+ <object n="Schedule" t="17">
+    <property n="timeToNextState"                  i="1001" a="3"/>
+    <property n="nextState"                        i="1002" a="-4"/>
+ </object>
+ </objectTypes>

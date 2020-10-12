@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls SAS" shortVendor="dcSas" model="CTR-8LD" description="obsolete" programId="90 00 67 06 00 03 04 01">
+  <WIZS>
+  </WIZS>
+  <DEVICE>
+    <LMOS>
+      <LMO name="node" layoutType="top" displayNvs="true"/>
+      <LMO name="Rir1" layoutType="left" displayNvs="true"/>
+      <LMO name="Rir2" layoutType="left" displayNvs="true"/>
+      <LMO name="Rir3" layoutType="left" displayNvs="true"/>
+      <LMO name="Rir4" layoutType="left" displayNvs="true"/>
+      <LMO name="GestionPiece1" layoutType="center" displayNvs="true"/>
+      <LMO name="GestionPiece2" layoutType="center" displayNvs="true"/>
+      <LMO name="GestionPiece3" layoutType="center" displayNvs="true"/>
+      <LMO name="GestionPiece4" layoutType="center" displayNvs="true"/>
+      <LMO name="Light1" layoutType="right" displayNvs="true"/>
+      <LMO name="Light2" layoutType="right" displayNvs="true"/>
+      <LMO name="Light3" layoutType="right" displayNvs="true"/>
+      <LMO name="Light4" layoutType="right" displayNvs="true"/>
+      <LMO name="Light5" layoutType="right" displayNvs="true"/>
+      <LMO name="Light6" layoutType="right" displayNvs="true"/>
+      <LMO name="Light7" layoutType="right" displayNvs="true"/>
+      <LMO name="Light8" layoutType="right" displayNvs="true"/>
+    </LMOS>
+  </DEVICE>
+</DeviceInfo>
+

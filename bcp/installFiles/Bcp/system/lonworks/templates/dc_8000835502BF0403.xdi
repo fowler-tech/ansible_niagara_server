@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls Inc." shortVendor="dc" model="ECL_VVTS" programId="80 00 83 55 02 BF 04 03">
+  <WIZS>
+   <WIZ shortName="EC_gfxProgram" name="GFX Wizards" key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{34CF7434-9559-41D2-9879-63E6F52D473C}_is1,DisplayIcon"/>
+  </WIZS>
+  <SCHEDULE fileIndex="4" calNb="1" calOffset="7036" calUnitSize="225" calCalendarEntryNb="25" schNb="2" schUnitSize="716" schOffset="7261" schSpecialEventNb="5" schDailyScheduleTimeValueNb="6" schSpecialEventPeriodTimeValueNb="6" />
+  <DEVICE>
+  </DEVICE>
+  <PTS extendedModify="true" genNvIndex="132-143">
+    <IP name="hwInput" type="3" modifyIndex="0" index="1-2" nvIndex="146" nvField="1-2" ovr="true" enum="true"/>
+    <IP name="hwOutput" type="4" modifyIndex="3" index="1-3" nvIndex="147" nvField="1-3"  enum="true" ovr="true"/>
+
+    <IP name="boolVariable" type="16" modifyIndex="7" index="1-124" nvIndex="148" nvField="1-124" ovr="true"/>
+    <IP name="enumVariable" type="7" modifyIndex="5" index="1-27;28-54" nvIndex="149;150" nvField="1-27;1-27" enum="true" ovr="true"/>
+    <IP name="numVariable" type="8" modifyIndex="4" index="1-7;8-14;15-21;22-28;29-35;36-42;43-49;50-56" nvIndex="151;152;153;154;155;156;157;158" nvField="1-7;1-7;1-7;1-7;1-7;1-7;1-7;1-7" ovr="true"/>
+    
+    <IP name="boolConstant" type="17" index="1-124" nvIndex="4" nvField="1-124" set="true"/>
+    <IP name="enumConstant" type="5" index="1-31;32-62" nvIndex="5;6" nvField="1-31;1-31" enum="true" set="true"/>
+    <IP name="numConstant" type="6" index="1-7;8-14;15-21;22-28;29-35;36-42;43-49;50-56" nvIndex="7;8;9;10;11;12;13;14" nvField="1-7;1-7;1-7;1-7;1-7;1-7;1-7;1-7" set="true"/>
+    <IP name="setpointConstant" type="18" index="1-6" nvIndex="15" nvField="1-6" set="true"/>
+
+    <EP name="nviFP" type="1" prefix="nviFP"/>
+    <EP name="nvoFP" type="2" prefix="nvoFP"/>
+    
+    <IP name="commSensor" type="15" modifyIndex="2" index="101-104;201-204;301-304;401-404" nvType="#[5].4;#[5].4;#[5].4;#[5].4"  nvName="nvoComSensr01_04;nvoComSensr01_04;nvoComSensr01_04;nvoComSensr01_04"  nvField="1-4;5-8;9-12;13-16" enum="true" ovr="true"/>
+    <IP name="wrInput" type="10" modifyIndex="1" index="1-7;8-14;15-18" nvType="#[5].17;#[5].18;#[5].19" nvName="nvoWrIn01_07;nvoWrIn08_14;nvoWrIn15_21" nvField="1-7;1-7;1-4" enum="true" ovr="true"/>
+  </PTS>
+</DeviceInfo>

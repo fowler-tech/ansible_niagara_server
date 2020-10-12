@@ -1,0 +1,31 @@
+- name: Copy needed niagara directories and files
+  hosts: owy_bms
+  vars:
+    - niagara_version: 'Niagara4.8'
+      dcf: 'Distech Controls Files'
+  tasks:
+    - name: Copy BCP directory to remote host
+      copy:
+        src: /home/ansible/ansible/bcp
+        dest: '/home/niagara/{{ niagara_version }}/distech/shared'
+        owner: niagara
+        group: niagara
+    - name: Copy Distech Controls Files Direcory
+      copy:
+        src: '/home/ansible/ansible/{{ dcf }}'
+        dest: '/home/niagara/{{ niagara_version }}/distech/shared'
+        owner: niagara
+        group: niagara
+    - name: Copy BCP directory to remote host
+      copy:
+        src: /home/ansible/ansible/bcp
+        dest: '/home/sunbeltAdmin/{{ niagara_version }}/distech/shared'
+        owner: sunbeltAdmin
+        group: sunbeltAdmin
+    - name: Copy Distech Controls Files Direcory
+      copy:
+        src: '/home/ansible/ansible/{{ dcf }}'
+        dest: '/home/sunbeltAdmin/{{ niagara_version }}/distech/shared'
+        owner: sunbeltAdmin
+        group: sunbeltAdmin
+

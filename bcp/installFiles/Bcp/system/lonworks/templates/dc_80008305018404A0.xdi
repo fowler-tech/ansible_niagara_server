@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls Inc." shortVendor="dc" model="Ecp500Gfx" programId="80 00 83 05 01 84 04 A0" ecp="true" guidelines="3.4" creationDate="2010-07-24 23:23:47">
+  <WIZS>
+   <WIZ shortName="EC_gfxProgram" name="GFX Wizards" key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{34CF7434-9559-41D2-9879-63E6F52D473C}_is1,DisplayIcon"/>
+   <WIZ shortName="Rtc" name="Real-time Clock" isV2="true" activeXName="DSRtcConfiguration" lmoIndex="1"/>
+   <WIZ shortName="Scheduler1" name="Scheduler 1" isV2="true" activeXName="DSSchedulerConfiguration" lmoIndex="2"/>
+   <WIZ shortName="Scheduler2" name="Scheduler 2" isV2="true" activeXName="DSSchedulerConfiguration" lmoIndex="3"/>
+  </WIZS>
+  <PTS>
+    <IP name="hwInput"  type="3" modifyIndex="0" index="1-7;8-14;15-16" nvIndex="22;23;24" nvField="1-7;1-7;1-2" scale="0.01" ovr="true" enum="true"/>
+    <IP name="wrInput" type="10" modifyIndex="1" index="1-14" nvIndex="25" nvField="1-14" wrScale="100"  enum="true" ovr="true"/>
+    <IP name="smInput" type="9" modifyIndex="2" index="1-5" nvIndex="24" nvField="6-10" wrScale="100"  enum="true"  ovr="true"/>
+    <IP name="hwOutput" type="4" modifyIndex="3" index="1-12" nvIndex="26" nvField="1-12" wrScale="100"  enum="true" ovr="true"/>
+    <IP name="numVariable" type="8" modifyIndex="4" index="1-7;8-14;15-21;22-28;29-35" nvIndex="16;17;18;19;20" nvField="1-7;1-7;1-7;1-7;1-7" scale="0.01" ovr="true"/>
+    <IP name="enumVariable" type="7" modifyIndex="5" index="1-27" nvIndex="21" nvField="1-27" wrScale="100"  enum="true" ovr="true"/>
+    <IP name="numConstant" type="6" index="1-7;8-14;15-21;22-28" nvIndex="11;12;13;14" nvField="1-7;1-7;1-7;1-7" scale="0.01" set="true"/>
+    <IP name="enumConstant" type="5" index="1-31" nvIndex="15" nvField="1-31" enum="true" set="true"/>
+    <EP name="nviFP" type="1" prefix="nviFP_"/>
+    <EP name="nvoFP" type="2" prefix="nvoFP_"/>
+  </PTS>
+</DeviceInfo>
+

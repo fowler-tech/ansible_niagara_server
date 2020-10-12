@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls SAS" shortVendor="dcSas" model="RCL-PFC-100 Series" programId="80 00 67 55 01 82 04 B1">
+  <WIZS>
+    <WIZ shortName="RCLRCBWiz" name="RCL RCB Wizard" key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{78E63588-1A31-4889-8F51-AE3C189DF811}_is1,DisplayIcon"/>
+  </WIZS>
+  <DEVICE>
+    <LMOS>
+      <LMO name="Node Object" layoutType="top" displayNvs="true"/>
+      <LMO name="RSSensor" layoutType="left" displayNvs="true"/>
+      <LMO name="FanCoil" layoutType="center" displayNvs="true"/>
+      <LMO name="LampAct01" layoutType="right" displayNvs="true"/>
+      <LMO name="LampAct02" layoutType="right" displayNvs="true"/>
+      <LMO name="LampAct03" layoutType="right" displayNvs="true"/>
+      <LMO name="LampAct04" layoutType="right" displayNvs="true"/>
+	  <LMO name="SblndAct01" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct02" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct03" layoutType="right" displayNvs="true"/>
+      <LMO name="SblndAct04" layoutType="right" displayNvs="true"/>
+    </LMOS>
+  </DEVICE>
+</DeviceInfo>
+

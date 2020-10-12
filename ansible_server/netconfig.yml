@@ -1,0 +1,23 @@
+---
+hosts: sjch.localdomain
+  network_connections:
+    - name: eno5-profile
+      autoconnet: no
+      type: ethernet
+      interface_name: eno5
+      ip:
+        dhcp4: no
+        auto6: no
+    - name: eno5.22
+      autoconnect: no
+      type: vlan
+      parent: eno5-profile
+      vlan:
+        id: 22
+        ip:
+          address:
+            - 10.1.22.3/24
+          auto6: no
+  roles:
+    - linux-system-roles.network
+ 

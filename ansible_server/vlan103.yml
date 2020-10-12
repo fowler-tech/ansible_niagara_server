@@ -1,0 +1,14 @@
+---
+- name: Create VLAN 103 interface for webserver
+  hosts: all 
+  tasks:
+    - name: Create vlan for 3rd floor
+      nmcli: 
+        type: vlan
+        conn_name: 'Floor_3'
+        ifname: Floor_3
+        vlandev: eno4
+        vlanid: 103
+        gw4: 10.1.103.1
+        ip4: 10.1.103.3/24
+        state: present

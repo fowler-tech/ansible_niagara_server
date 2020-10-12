@@ -1,0 +1,12 @@
+- name: Copy needed niagara directories and files
+  hosts: owy_bms 
+  vars:
+    - niagara_version: 'Niagara4.8'
+      dcf: 'Distech Controls Files'
+  tasks:
+    - name: Copy Niagara Installation Material 
+      copy:
+        src: /home/ansible/ansible/Distech_Controls_EC-NET-N4_for_Linux_x64-4.8.0.110.5.zip
+        dest: '/home/sunbeltAdmin/Downloads'
+        owner: sunbeltAdmin
+        group: sunbeltAdmin

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls SAS" shortVendor="dcSas" model="IOM-6DI6DO" programId="90 00 67 05 1e 03 04 64">
+  <WIZS>
+  </WIZS>
+  <DEVICE>
+    <LMOS>
+      <LMO name="node" layoutType="top" displayNvs="true"/>
+      <LMO name="Input1" layoutType="left" displayNvs="true"/>
+      <LMO name="Input2" layoutType="left" displayNvs="true"/>
+      <LMO name="Input3" layoutType="left" displayNvs="true"/>
+      <LMO name="Input4" layoutType="left" displayNvs="true"/>
+      <LMO name="Input5" layoutType="left" displayNvs="true"/>
+      <LMO name="Input6" layoutType="left" displayNvs="true"/>
+	  <LMO name="Output1" layoutType="center" displayNvs="true"/>
+      <LMO name="Output2" layoutType="center" displayNvs="true"/>
+      <LMO name="Output3" layoutType="center" displayNvs="true"/>
+      <LMO name="Output4" layoutType="center" displayNvs="true"/>
+      <LMO name="Output5" layoutType="center" displayNvs="true"/>
+      <LMO name="Output6" layoutType="center" displayNvs="true"/>
+	  <LMO name="Light1" layoutType="center" displayNvs="true"/>
+      <LMO name="Light2" layoutType="center" displayNvs="true"/>
+      <LMO name="Light3" layoutType="center" displayNvs="true"/>
+      <LMO name="Light4" layoutType="center" displayNvs="true"/>
+	  <LMO name="Light5" layoutType="center" displayNvs="true"/>
+      <LMO name="Light6" layoutType="center" displayNvs="true"/>
+    </LMOS>
+  </DEVICE>
+</DeviceInfo>
+

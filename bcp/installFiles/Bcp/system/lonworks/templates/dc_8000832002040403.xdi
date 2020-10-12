@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInfo vendor="Distech Controls Inc." shortVendor="dc" model="EcSw08v30"  createPoints="false" programId="80 00 83 20 02 04 04 03">
+  <WIZS>
+   <WIZ shortName="EcLight" name="EcLight Wizard" key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Distech Controls Inc\EcLight,ApplicationPath"/>
+  </WIZS>
+</DeviceInfo>

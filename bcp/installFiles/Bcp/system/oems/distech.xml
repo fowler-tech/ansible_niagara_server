@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Customization>
+<Expiration>never</Expiration>
+<OEMS>
+<OEM>distech</OEM>
+<OEM>distechEU</OEM>
+</OEMS>
+<Signature>302C02146D2B6E0CAC9A73DBE560F66E9CA20A61FE015A3A02144AFFFF97D11103E23CD66D1B0A0902C514173F94</Signature>
+</Customization>
