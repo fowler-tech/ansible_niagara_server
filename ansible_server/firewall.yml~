@@ -1,0 +1,89 @@
+- name: Set firewall rules
+  hosts: all 
+  vars:
+    - bacnet: 47808
+    - ssl_plat: 5011
+    - ssl_station: 4911
+    - cockpit: 9090
+    - gfx_in: 1930
+    - gfx_out: 1931
+    - radius_in: 1812
+    - radius_out: 1813
+    - https_re: 8443
+    - snmp: 161
+    - snmp_trap: 162  
+  tasks:
+    - name: Set bacnet udp port 
+      ansible.posix.firewalld:
+        port: '{{ bacnet }}/udp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set niagara secure platform port
+      ansible.posix.firewalld:
+        port: '{{ ssl_plat }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set secure station tcp port
+      ansible.posix.firewalld:
+        port: '{{ ssl_station }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set secure station udp port
+      ansible.posix.firewalld:
+        port: '{{ ssl_station }}/udp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set gfx inbound tcp port
+      ansible.posix.firewalld:
+        port: '{{ gfx_in }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set gfx outbound tcp port
+      ansible.posix.firewalld:
+        port: '{{ gfx_out }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set radius inbound tcp port
+      ansible.posix.firewalld:
+        port: '{{ radius_in }}/udp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set radius output tcp port
+      ansible.posix.firewalld:
+        port: '{{ radius_out }}/udp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set snmp tcp port
+      ansible.posix.firewalld:
+        port: '{{ snmp }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set snmp trap tcp port
+      ansible.posix.firewalld:
+        port: '{{ snmp_trap }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set https redirect tcp port
+      ansible.posix.firewalld:
+        port: '{{ https_re }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Set cockpit tcp port
+      ansible.posix.firewalld:
+        port: '{{ cockpit }}/tcp'
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: Reload ansible.posix.firewalld
+      command: firewall-cmd --reload
