@@ -1,5 +1,5 @@
 ---
 collections:
-  - name: ansible.posix
+  - name: ansible.posix.firewalld
     version: 0.1.0
     source: https://galaxy.ansible.com
