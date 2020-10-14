@@ -1,5 +1,5 @@
 - name: Set firewall rules
-  hosts: all 
+  hosts: owy_bms 
   vars:
     - bacnet: 47808
     - ssl_plat: 5011
