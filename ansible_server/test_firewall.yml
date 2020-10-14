@@ -1,0 +1,6 @@
+- name: Set bacnet udp port 
+  ansible.posix.firewalld:
+    port: 47808/udp
+    permanent: yes
+    zone: public
+    state: enabled
