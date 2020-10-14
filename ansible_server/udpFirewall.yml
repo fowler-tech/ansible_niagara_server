@@ -1,6 +1,10 @@
 ---
-- ansible.posix.firewalld:
-    port: 47808/udp
-    permanent: yes
-    zone: public
-    state: enabled
+- hosts: all
+  collections:
+    - ansible.posix.firewalld
+  tasks:
+    - name: permit traffic in default zone for https service
+      ansible.posix.firewalld:
+      service: https
+      permanent: yes
+      state: enabled
